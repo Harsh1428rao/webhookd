@@ -37,7 +37,7 @@ func main() {
 
 	// Auth
 	r.HandleFunc("/api/auth/register", h.Register).Methods("POST")
-	
+	r.HandleFunc("/api/auth/login", h.Login).Methods("POST")
 
 	// Endpoints
 	r.HandleFunc("/api/endpoints", h.AuthMiddleware(h.CreateEndpoint)).Methods("POST")
